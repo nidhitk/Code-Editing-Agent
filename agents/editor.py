@@ -1,26 +1,44 @@
-from utils.helpers import read_file
+from utils.helpers import read_file, write_file
+from ast_engine.patcher import apply_patch
+from runner.rollback import create_backup
+from runner.diff_viewer import generate_diff
 
 
 def editor_agent(state):
-    changes = []
     plan = state["edit_plan"]
+    requirement = state["requirement"]
+
+    generated_changes = []
 
     for step in plan:
-        action = step.get("action")
         file = step.get("file")
 
         if not file:
             continue
 
-        old_code = read_file(file)
+        original_code = read_file(file)
 
-        change = {
+        create_backup(file)
+
+        updated_code = apply_patch(
+            original_code,
+            step,
+            requirement
+        )
+
+        diff = generate_diff(
+            original_code,
+            updated_code,
+            file
+        )
+
+        write_file(file, updated_code)
+
+        generated_changes.append({
             "file": file,
-            "action": action,
-            "old_code": old_code
-        }
+            "action": step["action"],
+            "diff": diff
+        })
 
-        changes.append(change)
-
-    state["generated_changes"] = changes
+    state["generated_changes"] = generated_changes
     return state
