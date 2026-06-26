@@ -1,0 +1,9 @@
+langchain
+langgraph
+langchain-groq
+python-dotenv
+tree-sitter
+tree-sitter-python
+tree-sitter-javascript
+tree-sitter-java
+pydantic
