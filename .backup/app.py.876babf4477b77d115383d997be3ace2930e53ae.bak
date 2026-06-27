@@ -1,0 +1,3 @@
+from users import User
+
+USER = User("a@example.com")
