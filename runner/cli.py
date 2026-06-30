@@ -1,5 +1,6 @@
 from core.graph import build_graph
 from runner.rollback import rollback_file
+from runner.diff_viewer import colorize_diff, write_diff_report
 
 
 def _build_initial_state(project_path, requirement):
@@ -92,7 +93,10 @@ def run_cli():
 
         for change in result["generated_changes"]:
             print("=" * 80)
-            print(change["diff"])
+            print(colorize_diff(change["diff"]))
+
+        report_path = write_diff_report(project_path, result["generated_changes"])
+        print(f"\nColored review report saved to: {report_path}")
 
         choice = input("\nChoose action: [a]ccept, [e]dit again, [r]ollback: ").strip().lower()
 

@@ -1,8 +1,8 @@
 {
   "project_signature": {
     "C:\\code edit test\\sample_project\\app.py": {
-      "mtime_ns": 1782548078321242400,
-      "size": 240
+      "mtime_ns": 1782810432086097200,
+      "size": 211
     },
     "C:\\code edit test\\sample_project\\users.py": {
       "mtime_ns": 1782505594532219000,
@@ -19,8 +19,8 @@
         "symbols": [
           "FastAPI",
           "app",
-          "health",
-          "hello_world"
+          "get_hello_world",
+          "health"
         ],
         "imports": [
           "fastapi"
@@ -34,6 +34,7 @@
           "get",
           "health",
           "hello",
+          "helloworld",
           "import",
           "message",
           "ok",
@@ -59,19 +60,22 @@
           },
           {
             "kind": "FunctionDef",
-            "name": "hello_world",
-            "start_line": 15,
-            "end_line": 16,
-            "snippet": "def hello_world():\n    return {\"message\": \"hello\"}",
+            "name": "get_hello_world",
+            "start_line": 12,
+            "end_line": 13,
+            "snippet": "def get_hello_world():\n    return {\"message\": \"Hello World\"}",
             "tokens": [
+              "get",
               "hello",
               "world",
               "def",
+              "get",
               "hello",
               "world",
               "return",
               "message",
-              "hello"
+              "hello",
+              "world"
             ]
           }
         ]
@@ -117,8 +121,8 @@
     "reverse_dependency_graph": {},
     "project_signature": {
       "C:\\code edit test\\sample_project\\app.py": {
-        "mtime_ns": 1782548078321242400,
-        "size": 240
+        "mtime_ns": 1782810432086097200,
+        "size": 211
       },
       "C:\\code edit test\\sample_project\\users.py": {
         "mtime_ns": 1782505594532219000,

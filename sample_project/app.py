@@ -7,10 +7,7 @@ app = FastAPI()
 def health():
     return {"status": "ok"}
 
-from fastapi import FastAPI
 
-app = FastAPI()
-
-@app.get("/hello")
-def hello_world():
-    return {"message": "hello"}
+@app.get("/api/helloworld")
+def get_hello_world():
+    return {"message": "Hello World"}
