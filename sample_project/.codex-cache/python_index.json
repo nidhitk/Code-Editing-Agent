@@ -1,0 +1,133 @@
+{
+  "project_signature": {
+    "C:\\code edit test\\sample_project\\app.py": {
+      "mtime_ns": 1782810432086097200,
+      "size": 211
+    },
+    "C:\\code edit test\\sample_project\\users.py": {
+      "mtime_ns": 1782505594532219000,
+      "size": 83
+    }
+  },
+  "index": {
+    "module_to_file": {
+      "app": "C:\\code edit test\\sample_project\\app.py",
+      "users": "C:\\code edit test\\sample_project\\users.py"
+    },
+    "metadata": {
+      "C:\\code edit test\\sample_project\\app.py": {
+        "symbols": [
+          "FastAPI",
+          "app",
+          "get_hello_world",
+          "health"
+        ],
+        "imports": [
+          "fastapi"
+        ],
+        "content_tokens": [
+          "app",
+          "def",
+          "fast",
+          "fastapi",
+          "from",
+          "get",
+          "health",
+          "hello",
+          "helloworld",
+          "import",
+          "message",
+          "ok",
+          "return",
+          "status",
+          "world"
+        ],
+        "definitions": [
+          {
+            "kind": "FunctionDef",
+            "name": "health",
+            "start_line": 7,
+            "end_line": 8,
+            "snippet": "def health():\n    return {\"status\": \"ok\"}",
+            "tokens": [
+              "health",
+              "def",
+              "health",
+              "return",
+              "status",
+              "ok"
+            ]
+          },
+          {
+            "kind": "FunctionDef",
+            "name": "get_hello_world",
+            "start_line": 12,
+            "end_line": 13,
+            "snippet": "def get_hello_world():\n    return {\"message\": \"Hello World\"}",
+            "tokens": [
+              "get",
+              "hello",
+              "world",
+              "def",
+              "get",
+              "hello",
+              "world",
+              "return",
+              "message",
+              "hello",
+              "world"
+            ]
+          }
+        ]
+      },
+      "C:\\code edit test\\sample_project\\users.py": {
+        "symbols": [
+          "BaseModel",
+          "User"
+        ],
+        "imports": [
+          "pydantic"
+        ],
+        "content_tokens": [
+          "base",
+          "email",
+          "from",
+          "id",
+          "import",
+          "int",
+          "pydantic",
+          "str",
+          "users"
+        ],
+        "definitions": [
+          {
+            "kind": "ClassDef",
+            "name": "User",
+            "start_line": 4,
+            "end_line": 6,
+            "snippet": "class User(BaseModel):\n    id: int\n    email: str",
+            "tokens": [
+              "base",
+              "id",
+              "int",
+              "email",
+              "str"
+            ]
+          }
+        ]
+      }
+    },
+    "dependency_graph": {},
+    "reverse_dependency_graph": {},
+    "project_signature": {
+      "C:\\code edit test\\sample_project\\app.py": {
+        "mtime_ns": 1782810432086097200,
+        "size": 211
+      },
+      "C:\\code edit test\\sample_project\\users.py": {
+        "mtime_ns": 1782505594532219000,
+        "size": 83
+      }
+    }
+  }
+}

@@ -17,6 +17,10 @@ def route_after_clarifier(state):
 def route_after_validation(state):
     if state["validation_status"] == "pass":
         return "done"
+
+    if state.get("validation_attempts", 0) >= 3:
+        return "failed"
+
     return "retry"
 
 
@@ -48,7 +52,8 @@ def build_graph():
         route_after_validation,
         {
             "retry": "planner",
-            "done": END
+            "done": END,
+            "failed": END
         }
     )
 

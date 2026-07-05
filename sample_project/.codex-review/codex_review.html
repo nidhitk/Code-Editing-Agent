@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>C:\code edit test\sample_project\app.py - rewrite_logic</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 24px;
+      background: #0f1115;
+      color: #e6e6e6;
+      font-family: Consolas, "Courier New", monospace;
+    }
+    h1 {
+      font-size: 18px;
+      margin: 0 0 16px;
+      color: #f5f5f5;
+    }
+    .diff {
+      border: 1px solid #2a2f3a;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .line pre {
+      margin: 0;
+      padding: 6px 12px;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .header {
+      background: #1d2330;
+      color: #8fb4ff;
+    }
+    .add {
+      background: rgba(46, 160, 67, 0.18);
+      color: #7ee787;
+    }
+    .remove {
+      background: rgba(248, 81, 73, 0.18);
+      color: #ff7b72;
+    }
+    .context {
+      background: #0f1115;
+      color: #d0d7de;
+    }
+  </style>
+</head>
+<body>
+  <h1>C:\code edit test\sample_project\app.py - rewrite_logic</h1>
+  <div class="diff">
+    <div class="line header"><pre>--- C:\code edit test\sample_project\app.py_old</pre></div><div class="line header"><pre>+++ C:\code edit test\sample_project\app.py_new</pre></div><div class="line context"><pre>@@ -7,8 +7,7 @@</pre></div><div class="line context"><pre> def health():</pre></div><div class="line context"><pre>     return {&quot;status&quot;: &quot;ok&quot;}</pre></div><div class="line context"><pre> </pre></div><div class="line remove"><pre>-from fastapi import FastAPI</pre></div><div class="line context"><pre> </pre></div><div class="line remove"><pre>-app = FastAPI()</pre></div><div class="line remove"><pre>-</pre></div><div class="line remove"><pre>-@app.get(&quot;/hello&quot;)</pre></div><div class="line add"><pre>+@app.get(&quot;/api/helloworld&quot;)</pre></div><div class="line add"><pre>+def get_hello_world():</pre></div><div class="line add"><pre>+    return {&quot;message&quot;: &quot;Hello World&quot;}</pre></div>
+  </div>
+</body>
+</html>
